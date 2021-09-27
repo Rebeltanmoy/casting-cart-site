@@ -11,4 +11,4 @@ https://ecstatic-haibt-39210c.netlify.app/?fbclid=IwAR0lp0wbshsL3M5V_II229chEEd3
 ##Tools
 * React.js
 * vanela css
-* Botstrap
+* Bootstrap
