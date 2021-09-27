@@ -1,7 +1,0 @@
-.list-group li{
-    list-style: none;
-}
-.cart{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}

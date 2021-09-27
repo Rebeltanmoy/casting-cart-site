@@ -1,6 +1,8 @@
 import React from 'react';
+import './SelectedPProgrammer.css';
 
-const SelectedCasting = (props) => {
+const SelectedProgrammer = (props) => {
+
     const { name, img } = props.sProgrammer;
     return (
         <div>
@@ -19,8 +21,8 @@ const SelectedCasting = (props) => {
                     </div>}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
-export default SelectedCasting;
+export default SelectedProgrammer;

@@ -1,9 +1,11 @@
 import React from 'react';
-import('./Product.css')
+import './Programmer.css';
 
-const Product = (props) => {
-    console.log(props.product);
-    const { name, age, role, img, salary, indestry } = props.product;
+const Programmer = (props) => {
+    // console.log(props.handleCart)
+    // Destructuring Data from props:
+    const { handleCart } = props;
+    const { name, age, img, role, salary, indestry } = props.programmer;
     return (
         <div>
             <div className="col ">
@@ -13,7 +15,7 @@ const Product = (props) => {
                         <h5 className="card-title ">{name}</h5>
                         <h5 className="card-text ">Age: {age}</h5>
                         <h4>Salary: ${salary}</h4>
-                        <h6>Age: {age}</h6>
+                        <h6>Role: {role}</h6>
                         <h6>Indestry: {indestry}</h6>
                         <button onClick={() => handleCart(props.programmer)} type="button" className="btn text-dark mt-2 btn-outline-primary"><i className="fas fa-plus-square"></i> &nbsp; Select Programmer</button>
                     </div>
@@ -23,4 +25,4 @@ const Product = (props) => {
     );
 };
 
-export default Product;
+export default Programmer;

@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import Product from '../../Product/Product';
-import('./shop.css')
+import Cart from '../Cart/Cart';
+import Programmer from '../Programmer/Programmer';
+import './Main.css';
 
-const Shop = () => {
-    const [products, serProducts] = useState([]);
-
+const Main = () => {
+    // Declare useState for state Data:
+    const [programmers, setProgrammers] = useState([]);
+    // For Cart Selected Programmers:
+    const [selectedProgrammers, setSelectedProgrammers] = useState([]);
+    // Load Data from JSON file:
     useEffect(() => {
         fetch('./cast.JSON')
             .then(res => res.json())
-            .then(data => serProducts(data));
-    }, [])
+            .then(data => setProgrammers(data))
+    }, []);
+
+    // For Cart Calculation Pass Data by onClick:
+    const handleCart = programmer => {
+        // console.log(programmer);
+        const newArr = [...selectedProgrammers, programmer];
+        setSelectedProgrammers(newArr);
+    }
+
     return (
-        return (
         <div className="container my-5">
             <div className="row">
                 <div className="col-lg-9">
@@ -37,4 +48,4 @@ const Shop = () => {
     );
 };
 
-export default Shop;
+export default Main;
